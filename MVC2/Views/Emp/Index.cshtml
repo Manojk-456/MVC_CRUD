@@ -1,0 +1,33 @@
+﻿@model MVC2.Models.emp
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Emp Index page </h2>
+<form>
+    <div class="mb-3">
+        <label class="form-label">Name</label>
+       @*<input type="text" class="form-control">*@
+        @Html.TextBoxFor(m => m.name, new {@class="form-control"})
+        
+        <br/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Model</label>
+        @*<input type="text" class="form-control"><br/>*@
+        @Html.TextBoxFor(m => m.model, new { @class = "form-control" })
+        <br/>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price</label>
+        @*<input type="number" class="form-control"><br/>*@
+        @Html.TextBoxFor(m => m.price, new { @class = "form-control" })
+        <br/>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+<br/><br/>
+    <button type="submit" class="btn btn-success">Home</button>
+</form>
+

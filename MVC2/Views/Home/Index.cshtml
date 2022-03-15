@@ -1,0 +1,30 @@
+﻿@model List<MVC2.DB_Context_EF.carmodel>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th class="table-dark">Id</th>
+        <th class="table-dark">Name</th>
+        <th class="table-dark">Model</th>
+        <th class="table-dark">Price</th>
+        <th class="table-dark">Edit</th>
+        <th class="table-dark">Delete</th>
+    </tr>
+   @foreach(var item in Model)
+            {
+<tr>
+    <td>@item.id</td>
+    <td>@item.name</td>
+    <td>@item.model</td>
+    <td>@item.price</td>
+    <td><button type="button" class="btn btn-success">Edit</button></td>
+    <td><button type="button" class="btn btn-danger">Delete</button></td>
+
+</tr>
+            }
+</table>
+<button type="button" class="btn btn-success" onclick="window.location.href = 'emp';">Add New</button>
